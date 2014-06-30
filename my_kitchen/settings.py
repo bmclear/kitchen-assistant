@@ -23,7 +23,6 @@ PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 # SECURITY WARNING: keep the secret key used in production secret!
 # Use a long string of alphanumeric characters
 SECRET_KEY = ''
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
