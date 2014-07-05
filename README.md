@@ -9,6 +9,17 @@ can then:
 * Discuss and share recipes via a web forum
 
 ### How to Use the Current Source Code
+Use of this code assumes that you have installed Python Django on your system. This code
+is compatible with Django 1.6.5 (the version currently in use for our development, and the latest
+non-development release). It has also been tested using Python 2.7.8 (it should work for Python 2.7.*).
+__Note: This has NOT been tested with Python 3.__
+
+To install Python, visit the official Python download [page](https://www.python.org/downloads/) and download the
+appropriate installer for your operating system. Run the installer to install Python on your system.
+
+To install Django, visit the official Django download [page](https://www.djangoproject.com/download/) and follow
+their instructions.
+
 First, clone the current repository:
 
 `git clone https://github.com/bmclear/kitchen-assistant.git`
