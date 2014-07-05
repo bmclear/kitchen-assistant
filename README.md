@@ -49,7 +49,7 @@ information about running a server.
 ### Current Progress
 * The models have pretty much been designed at this point. These can be found
 in `kitchen/models.py`.
-* Login/logout features have been implemented (a registration page should be
-complete within the next couple of days).
+* Login/logout features have been implemented, including registration page.
 * A mockup of the user's main page has been designed and should be implemented
 soon.
+* User-based page content has been tested, and it functions as expected.
