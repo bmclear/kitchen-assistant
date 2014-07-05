@@ -5,13 +5,24 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 from kitchen.models import Ingredient
+from kitchen.forms import UserForm, UserProfileForm
 
 from datetime import datetime
 
 @login_required
 def index(request):
     context = RequestContext(request)
-    return render_to_response("kitchen/index.html", {}, context)
+    current_user = request.user
+
+    if current_user.username == "kirk":
+        temp = "You are 'kirk'."
+    else:
+        temp = "You are NOT 'kirk'."
+
+    context_dict = {}
+    context_dict['temp'] = temp
+
+    return render_to_response("kitchen/index.html", context_dict, context)
 
 def user_login(request):
     context = RequestContext(request)
@@ -38,3 +49,35 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect("/kitchen/")
+
+def user_register(request):
+    context = RequestContext(request)
+
+    registered = False
+
+    if request.method == "POST":
+        user_form = UserForm(data=request.POST)
+        profile_form = UserProfileForm(data=request.POST)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save()
+            user.set_password(user.password)
+            user.save()
+
+            profile = profile_form.save(commit=False)
+            profile.user = user
+
+            if "picture" in request.FILES:
+                profile.picture = request.FILES['picture']
+
+            profile.save()
+            registered = True
+        else:
+            print user_form.errors, profile_form.errors
+    else:
+        user_form = UserForm()
+        profile_form = UserProfileForm()
+
+    return render_to_response("kitchen/register.html",
+            {'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
+            context)
