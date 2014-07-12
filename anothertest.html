@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Kitchen Assistant: Add a recipe -->
+<html>
+	<head>
+		<title> Add a Recipe </title>
+		<h1> Add a Recipe </h1>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />		
+	</head>
+
+	<body>
+		<div id="rec_card">
+			<textarea id="rec_title" onfocus="clearContents(this)">
+				Title
+			</textarea>
+
+			<hr/>
+
+			<textarea id="rec_ing" onfocus="clearContents(this)">
+				Ingredients
+			</textarea>
+
+			<textarea id="rec_dir" onfocus="clearContents(this)">
+				Directions
+			</textarea>
+		</div>
+
+		<button id="commit_rec" type="button" onclick="myFunction()">
+			Add to recipes
+		</button>
+
+		<script>
+			function myFunction()
+			{
+				alert("I did something!");
+			}
+
+			function clearContents(element)
+			{
+				element.value = '';
+			}
+		</script>
+	</body>
+</html>

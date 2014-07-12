@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Kitchen Assistant Homepage -->
+<html>
+	<head>
+		<title> Kitchen Assistant </title>
+		<h1> Kitchen Assistant </h1>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+	</head>
+
+	<body>
+		<div id="slist">
+			Shopping List
+			<textarea id="shoplist"></textarea>
+			<hr/>
+			<button id="save" type="button" onclick="myFunction()">
+				Save changes to list
+			</button>
+			<button id="changeview" type="button" onclick="javascript:location.href='shoppinglist.html'">
+				Change view
+			</button>
+		</div>
+
+		<div id="menu">
+			<button id="makebutton" type="button" onclick="javascript:location.href='whatmake.html'"> 
+				What can I make?
+			</button>
+
+			<button id="addrec" type="button" onclick="javascript:location.href='anothertest.html'">
+				Add a recipe
+			</button>
+
+			<button id="findrec" type="button" onclick="myFunction()">
+				Find a recipe
+			</button>
+
+			<button id="browserec" type="button" onclick="javascript:location.href='browserecipes.html'">
+				Browse recipes
+			</button>
+		</div>
+
+		<script>
+			function myFunction()
+			{
+				alert("I did something!");
+			}
+		</script>
+	</body>
+
+	<p> By Brandon McLear, Kirk Smith, and Courtney Lang </p>
+
+</html>

@@ -1,0 +1,225 @@
+/* Stylesheet for Kitchen Assistant homepage */
+h1 {
+	font-family: Garamond;
+	color: #ffffcc;
+	text-align: center;
+}
+
+body {
+	background-color: #003366; /* 800000 */
+}
+
+#slist {
+	float: left;
+	text-align: center;
+	margin: left;
+	border: 2px solid #800000;
+	font-family: Garamond;
+	width: 625px;
+	height: 500px;
+	background-color: #ffffcc;
+	border-radius: 5px;
+}
+
+#shoplist {
+	text-align: left;
+	margin: left;
+	margin-top: 5px;
+	font-family: Garamond;
+	width: 575px;
+	height: 375px;
+	background-color: #ffffcc;
+	align: top;
+	font-size: 15px;
+}
+
+#save {
+	margin: left;
+	margin-top: 20px;
+	margin-left: 25px;
+	float: left;
+	border: 2px solid black;
+	height: 25px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#changeview {
+	margin-top: 20px;
+	margin-right: 350px;
+	border: 2px solid black;
+	height: 25px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#menu {
+	float: right;
+	text-align: center;
+	border: 2px solid #800000;
+	font-family: Garamond;
+	width: 625px;
+	height: 500px;
+	background-color: #ffffcc;
+	border-radius: 5px;
+}
+
+#makebutton {
+	margin: auto;
+	margin-top: 20px;
+	margin-left: 25px;
+	text-align: center;
+	float: left;
+	border: 2px solid black;
+	height: 300px;
+	width: 275px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#addrec {
+	margin: auto;
+	margin-top: 20px;
+	margin-right: 25px;
+	text-align: center;
+	float: right;
+	border: 2px solid black;
+	height: 300px;
+	width: 275px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#findrec {
+	margin: center;
+	margin-top: 20px;
+	text-align: center;
+	float: center;
+	border: 2px solid black;
+	height: 50px;
+	width: 550px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#browserec {
+	margin: center;
+	margin-top: 20px;
+	text-align: center;
+	float: center;
+	border: 2px solid black;
+	height: 50px;
+	width: 550px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#rec_card {
+	margin: auto;
+	border: 2px solid #800000;
+	font-family: Garamond;
+	width: 625px;
+	height: 400px;
+	background-color: #ffffcc;
+	border-radius: 5px;
+}
+
+#rec_title {
+	text-align: center;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	align: center;
+	font-family: Garamond;
+	width: 575px;
+	height: 30px;
+	background-color: #ffffcc;
+	font-size: 28px;
+	border: none;
+}
+
+#rec_ing {
+	text-align: left;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	align: center;
+	font-family: Garamond;
+	width: 575px;
+	height: 100px;
+	background-color: #ffffcc;
+	font-size: 15px;
+	border: none;
+}
+
+#rec_dir {
+	text-align: left;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	align: center;
+	font-family: Garamond;
+	width: 575px;
+	height: 220px;
+	background-color: #ffffcc;
+	font-size: 15px;
+	border: none;
+}
+
+#commit_rec {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 20px;
+	border: 2px solid black;
+	height: 100px;
+	width: 200px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#search {
+	margin: auto;
+	display: block;
+	height: 20px;
+	width: 500px;
+	font-size: 18px;
+}
+
+#submit {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 20px;
+	border: 2px solid black;
+	height: 50px;
+	width: 100px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+p {
+	font-family: Garamond;
+	color: #ffffcc;
+	text-align: center;
+}
+
+hr {
+	border: 0;
+	clear: both;
+	display: block;
+	width: 96%;
+	background-color: black;
+	height: 1px;
+}
