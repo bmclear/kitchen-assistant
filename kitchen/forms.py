@@ -1,5 +1,5 @@
 from django import forms
-from kitchen.models import UserProfile
+from kitchen.models import UserProfile, UserIngredient, UserRecipe
 from django.contrib.auth.models import User
 
 class UserForm(forms.ModelForm):
@@ -18,3 +18,21 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('website', 'picture')
+
+class IngredientForm(forms.ModelForm):
+    name = forms.CharField(help_text="Ingredient Name", widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+    class Meta:
+        model = UserIngredient
+        fields = ('name',)
+        exclude = ['user']
+
+class RecipeForm(forms.ModelForm):
+    name = forms.CharField(widget=forms.TextInput(attrs={'class': 'rec_title', 'placeholder': 'Title'}))
+    ingredients = forms.CharField(widget=forms.Textarea(attrs={'class': 'rec_ing', 'placeholder': 'Ingredients'}))
+    instructions = forms.CharField(widget=forms.Textarea(attrs={'class': 'rec_dir', 'placeholder': 'Directions'}))
+
+    class Meta:
+        model = UserRecipe
+        fields = ('name', 'ingredients', 'instructions',)
+        exclude = ['user',]

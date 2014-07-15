@@ -1,0 +1,31 @@
+{% extends 'kitchen/base.html' %}
+
+{% block title %}Browse Recipes{% endblock %}
+
+{% block body_block %}
+	<h1> Browse Recipes </h1>
+    <input id="search"></input>
+
+    <button id="submit" type="button" onclick="myFunction()"> 
+        Search
+    </button>
+
+    <br />
+
+    <div class="container">
+        {% if recipes %}
+            {% for recipe in recipes %}
+            <div class="rec_card">
+                <h3 style="text-align: center">{{ recipe.name }}<h3>
+                <h4 style="text-align: center">Ingredients</h4>
+                {{ recipe.ingredients|linebreaksbr }}<br />
+                <h4 style="text-align: center">Directions</h4>
+                {{ recipe.instructions|linebreaksbr }}<br />
+            </div>
+            <br />
+            {% endfor %}
+        {% else %}
+        <h3>You have no recipes at this time.</h3>
+        {% endif %}
+    </div>
+{% endblock %}

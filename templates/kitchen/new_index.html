@@ -1,0 +1,36 @@
+{% extends 'kitchen/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body_block %}
+    <h1>Hello, {{ user.username }}!</h1>
+    <div id="slist">
+        Shopping List
+        <textarea id="shoplist"></textarea>
+        <hr/>
+        <button id="save" type="button">
+            Save changes to list
+        </button>
+        <button id="changeview" type="button" onclick="javascript:location.href='/kitchen/shopping_list/'">
+            Change view
+        </button>
+    </div>
+
+    <div id="menu">
+        <button id="makebutton" type="button" onclick="javascript:location.href='/kitchen/what_make/'"> 
+            What can I make?
+        </button>
+
+        <button id="addrec" type="button" onclick="javascript:location.href='/kitchen/add_recipe/'">
+            Add a recipe
+        </button>
+
+        <button id="findrec" type="button">
+            Find a recipe
+        </button>
+
+        <button id="browserec" type="button" onclick="javascript:location.href='/kitchen/browse_recipes/'">
+            Browse recipes
+        </button>
+    </div>
+{% endblock %}

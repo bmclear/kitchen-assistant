@@ -9,6 +9,11 @@ body {
 	background-color: #003366; /* 800000 */
 }
 
+footer {
+    text-align: center;
+    color: #ffffcc;
+}
+
 #slist {
 	float: left;
 	text-align: center;
@@ -34,7 +39,7 @@ body {
 }
 
 #save {
-	margin: left;
+	margin: 10;
 	margin-top: 20px;
 	margin-left: 25px;
 	float: left;
@@ -120,72 +125,73 @@ body {
 	font-size: 15px;
 }
 
-#rec_card {
-	margin: auto;
-	border: 2px solid #800000;
+.rec_card {
+    margin: 0 auto;
+	border: 2px solid #000000;
 	font-family: Garamond;
-	width: 625px;
-	height: 400px;
+	width: 50%;
+	height: 90%;
 	background-color: #ffffcc;
-	border-radius: 5px;
+	border-radius: 9px;
 }
 
-#rec_title {
+.rec_title {
 	text-align: center;
 	margin-top: 5px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	align: center;
 	font-family: Garamond;
 	width: 575px;
-	height: 30px;
+	height: 50px;
 	background-color: #ffffcc;
 	font-size: 28px;
-	border: none;
+	border: 1px solid;
+    border-radius: 5px;
 }
 
-#rec_ing {
+.rec_ing {
 	text-align: left;
 	margin-top: 5px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	align: center;
 	font-family: Garamond;
 	width: 575px;
 	height: 100px;
 	background-color: #ffffcc;
 	font-size: 15px;
-	border: none;
+	border: 1px solid;
+    border-radius: 5px;
 }
 
-#rec_dir {
+.rec_dir {
 	text-align: left;
 	margin-top: 5px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	align: center;
 	font-family: Garamond;
 	width: 575px;
 	height: 220px;
 	background-color: #ffffcc;
 	font-size: 15px;
-	border: none;
+	border: 1px solid;
+    border-radius: 5px;
 }
 
-#commit_rec {
+.commit_rec {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	margin-top: 20px;
 	border: 2px solid black;
-	height: 100px;
+	height: 50px;
 	width: 200px;
 	background-color: #ffffcc;
 	font-family: Garamond;
 	font-size: 15px;
+    border-radius: 9px;
 }
 
 #search {

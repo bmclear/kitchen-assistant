@@ -9,24 +9,18 @@ class UserProfile(models.Model):
 
     def __unicode__(self):
         return self.user.username
-    
-class UserKitchen(models.Model):
-    user = models.ForeignKey(UserProfile)
-    
-    def __unicode__(self):
-        return self.user.username + "'s kitchen"
 
 class UserIngredient(models.Model):
-    kitchen = models.ForeignKey(UserKitchen)
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=128, unique=True)
-    amount = models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.name
 
 class UserRecipe(models.Model):
-    kitchen = models.ForeignKey(UserKitchen)
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=128)
+    ingredients = models.TextField()
     instructions = models.TextField()
 
     def __unicode__(self):

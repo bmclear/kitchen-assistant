@@ -1,0 +1,23 @@
+{% extends 'kitchen/base.html' %}
+
+{% block title %}Add a Recipe{% endblock %}
+
+{% block body_block %}
+    <div>
+        <h1>Add a Recipe</h2>
+    </div>
+    
+    <div class="rec_card">
+        <form id="recipe_form" method="post" action="/kitchen/add_recipe/" enctype="text/html">
+            {% csrf_token %}
+
+            {% for field in recipe_form.visible_fields %}
+                {{ field.errors }}<br />
+                {{ field }}
+            {% endfor %}
+
+            <button class="commit_rec" type="submit">Add Recipe</button>
+            <br />
+        </form>
+    </div>
+{% endblock %}
