@@ -6,14 +6,41 @@
     <h1>Hello, {{ user.username }}!</h1>
     <div id="slist">
         Shopping List
-        <textarea id="shoplist"></textarea>
+        <div id="shoplist"></div>
         <hr/>
+        <input id="shopinput" placeholder="Input ingredients here" onkeydown="enterpress(event)"></input>
+        <button id="adding" type="button" onclick="myFunc()"> Add </button>
         <button id="save" type="button">
             Save changes to list
         </button>
         <button id="changeview" type="button" onclick="javascript:location.href='/kitchen/shopping_list/'">
             Change view
         </button>
+        <script>
+            var cur_list = "";
+            var fronttags = "<label><input type='checkbox'/>";
+            var endtags = "</label>";
+            function enterpress(event)
+            {
+                if (event.keyCode == 13)
+                {
+                    document.getElementById('adding').click();
+                } 
+            }
+            function myFunc()
+            {
+                var input_text = document.getElementById('shopinput').value;
+                if( input_text == "" )
+                    return;
+                document.getElementById('shopinput').value = "";
+                var new_item = fronttags.concat(input_text);
+                new_item = new_item.concat(endtags);
+                cur_list = cur_list.concat(new_item);
+                cur_list = cur_list.concat('<br />');
+                document.getElementById('shoplist').innerHTML = cur_list;
+                document.getElementById('shoplist').scrollTop = 10000;
+            }
+        </script>
     </div>
 
     <div id="menu">
