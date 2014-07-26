@@ -17,7 +17,7 @@ footer {
 #slist {
 	float: left;
 	text-align: center;
-    margin-left: 10px;
+    margin-left: 25px;
 	border: 2px solid #800000;
 	font-family: Garamond;
 	width: 625px;
@@ -66,8 +66,19 @@ footer {
 }
 
 #changeview {
-	margin-top: 17px;
-	margin-right: 350px;
+	margin-top: 20px;
+	margin-right: 220px;
+	border: 2px solid black;
+	height: 25px;
+	background-color: #ffffcc;
+	font-family: Garamond;
+	font-size: 15px;
+}
+
+#commiting {
+	float: right;
+	margin-top: -25px;
+	margin-right: 175px;
 	border: 2px solid black;
 	height: 25px;
 	background-color: #ffffcc;
@@ -77,6 +88,7 @@ footer {
 
 #menu {
 	float: right;
+	margin-right: 25px;
 	text-align: center;
 	border: 2px solid #800000;
 	font-family: Garamond;
@@ -215,7 +227,7 @@ footer {
 	display: block;
 	height: 20px;
 	width: 500px;
-	font-size: 18px;
+	font-size: 12px;
 }
 
 #submit {
@@ -244,4 +256,10 @@ hr {
 	width: 96%;
 	background-color: black;
 	height: 1px;
+}
+
+label {
+	font-family: Garamond;
+	text-decoration: none;
+	margin-left: 10px;
 }
