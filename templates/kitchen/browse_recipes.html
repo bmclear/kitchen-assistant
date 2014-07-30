@@ -4,7 +4,7 @@
 
 {% block body_block %}
 	<h1> Browse Recipes </h1>
-    <input id="search"></input>
+    <input id="search" placeholder="Search..."></input>
 
     <button id="submit" type="button" onclick="myFunction()"> 
         Search
@@ -25,7 +25,7 @@
             <br />
             {% endfor %}
         {% else %}
-        <h3>You have no recipes at this time.</h3>
+        <h3 style="color: #ffffcc">You have no recipes at this time.</h3>
         {% endif %}
     </div>
 {% endblock %}

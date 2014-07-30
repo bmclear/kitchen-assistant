@@ -4,14 +4,14 @@
 
 {% block body_block %}
 <div class="container">
-    <h2>Register</h2>
+    <h2 style="color: #ffffcc">Register</h2>
     <br />
     {% if registered %}
     <p>Thank you for registering!</p>
     <a href="/kitchen/login/">Login when you are ready to go.</a>
     {% else %}
     <div class="container">
-        <form id="user_form" class="form-signin col-sp-8 col-md-8" method="post" action="/kitchen/register/" enctype="multipart/form-data">
+        <form style="color: #ffffcc" id="user_form" class="form-signin col-sp-8 col-md-8" method="post" action="/kitchen/register/" enctype="multipart/form-data">
             {% csrf_token %}
 
             {% for field in user_form.visible_fields %}
